@@ -1,0 +1,258 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+    font-family: Raleway-Regular;
+    src: url("../Fonts/Raleway-Regular.ttf");
+}
+
+@font-face {
+    font-family: Raleway-Bold;
+    src: url("../Fonts/Raleway-Bold.ttf");
+}
+
+body {
+    font-family: Raleway-Regular, 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 30px;
+    color: #777777;
+}
+
+/* Header - Navbar */
+.navbar {
+    padding: 15px 0;
+    background-color: white;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    max-height: 40px;
+    margin-right: 8px;
+}
+
+.navbar-brand span {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    font-family: Raleway-Bold;
+}
+
+.navbar-brand small {
+    display: block;
+    font-size: 12px;
+    color: #777;
+    margin-top: -5px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #333;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 8px 15px;
+    margin: 0 2px;
+    transition: all 0.3s ease;
+}
+
+.navbar-light .navbar-nav .nav-item.active .nav-link,
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #ff3c41;
+    background-color: transparent;
+}
+
+/* Carousel */
+.carousel .carousel-inner img {
+    width: 100%;
+    height: auto;
+}
+
+/* Thanh điều hướng carousel trong suốt */
+.carousel-control-prev,
+.carousel-control-next {
+    background: transparent;
+    opacity: 0.7;
+    width: 5%;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+}
+
+.carousel-indicators {
+    bottom: 20px;
+}
+
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+}
+
+.carousel-indicators button.active {
+    background-color: white;
+}
+
+/* About Section */
+.title {
+    font-size: 40px;
+    text-align: center;
+    font-family: Raleway-Bold;
+    color: #1b1b1b;
+    letter-spacing: 2px;
+    padding: 60px 0 30px 0;
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.title:after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background-color: #76daff;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.text-center {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about {
+    padding: 30px 0 60px;
+}
+
+.about-img img {
+    width: 100%;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+}
+
+.about-content {
+    padding: 20px 0;
+}
+
+.about-content h3 {
+    font-size: 26px;
+    font-family: Raleway-Bold;
+    color: #3c3c3c;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+}
+
+.about-content .btn-primary {
+    background: none;
+    border: 3px solid #76daff;
+    font-size: 12px;
+    font-family: Raleway-Bold;
+    color: #3c3c3c;
+    padding: 10px 25px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.about-content .btn-primary:hover {
+    background-color: #76daff;
+    color: white;
+}
+
+.line {
+    height: 1px;
+    background: #f7f7f7;
+    margin: 40px auto;
+}
+
+/* CSS cho icon dịch vụ */
+.service-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.service-icon {
+    margin-bottom: 15px;
+}
+
+.service-icon i {
+    font-size: 36px;
+    color: #76daff;
+    transition: all 0.3s ease;
+}
+
+.service-icon i:hover {
+    transform: translateY(-5px);
+}
+
+.service-content {
+    width: 100%;
+}
+
+.service-content h4 {
+    font-size: 20px;
+    color: #222222;
+    font-family: Raleway-Bold;
+    font-weight: 100;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.service-content p {
+    font-size: 15px;
+    color: #777777;
+    font-family: Raleway-Regular;
+    margin-bottom: 0;
+}
+
+/* Responsive */
+@media screen and (max-width: 992px) {
+    .about-img, .about-content {
+        text-align: center;
+    }
+    
+    .service-box {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: 32px;
+        padding: 40px 0 20px;
+    }
+    
+    .about-content h3 {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .navbar-light .navbar-brand {
+        width: 70%;
+    }
+    
+    .about-img {
+        margin-bottom: 30px;
+    }
+}
